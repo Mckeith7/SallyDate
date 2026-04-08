@@ -1,17 +1,12 @@
-// Initialize EmailJS with your Public Key
 emailjs.init("WwiAqL_Qw_EV405nv"); 
-
 const favSong = new Audio('fav_song.mp3');
-let selections = {
-    location: '',
-    movie: '',
-    time: 'Saturday at 7:00 PM'
-};
+let selections = { location: '', movie: '', time: 'Saturday at 7:00 PM' };
 
 function startExperience() {
-    // Starts the song at 14 seconds
-    favSong.currentTime = 14; 
-    favSong.play();
+    try {
+        favSong.currentTime = 14; 
+        favSong.play();
+    } catch (e) { console.log("Audio play blocked"); }
     showSection('phase1');
 }
 
@@ -22,20 +17,12 @@ function selectLocation(loc) {
 
 function selectMovie(movieName) {
     selections.movie = movieName;
-    
-    // Update the final ticket text
-    document.getElementById('summary-text').innerHTML = 
-        `We're going to the <b>${selections.location}</b> <br> to watch <b>${selections.movie}</b>.`;
-
-    // SILENT EMAIL SENDING
+    document.getElementById('summary-text').innerHTML = "We're going to the <b>" + selections.location + "</b> <br> to watch <b>" + selections.movie + "</b>.";
     emailjs.send("service_fdlyjyd", "template_zvvcrxp", {
         location: selections.location,
         movie: selections.movie,
         time: selections.time
-    }).then(() => {
-        console.log("Keith notified silently!");
-    });
-
+    }).then(() => console.log("Sent!"), (err) => console.log(err));
     showSection('final');
 }
 
