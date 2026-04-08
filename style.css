@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; font-family: 'Inter', sans-serif; background: #000; color: #fff; }
+body, html { 
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    width: 100%; 
+    overflow: hidden; 
+    font-family: 'Inter', sans-serif; 
+    /* This forces the image as the base layer of the whole site */
+    background: #000 url('sally_bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; 
+}
+
 #bg-video {
     position: fixed;
     top: 0;
