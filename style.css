@@ -14,7 +14,7 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* Make sure it's behind everything */
+    z-index: -2; /* Make sure it's behind everything */
     object-fit: cover;
     background-color: black; /* This keeps it dark until the video pops in */
 }
@@ -26,7 +26,7 @@ body, html {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4); /* Reduced opacity so the video is clearer */
-    z-index: 0;
+    z-index: -1;
 }
 
 
