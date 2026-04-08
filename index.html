@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>A Special Premiere | Sally</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="sally_video.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="sally_date.mp4" as="video" type="video/mp4">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <video autoplay muted loop playsinline webkit-playsinline id="bg-video">
-        <source src="sally_video.mp4" type="video/mp4">
+        <source src="sally_date.mp4" type="video/mp4">
     </video>
+
     <div class="overlay"></div>
+
     <div id="app">
         <section id="intro" class="active">
             <h1 class="glam-text">A Special Premiere</h1>
             <p class="sub-text">Starring Sally</p>
             <button class="main-btn" onclick="startExperience()">Get My Ticket</button>
         </section>
+
         <section id="phase1">
             <h2 class="step-title">Pick the Vibe</h2>
             <div class="choice-container">
@@ -32,6 +35,7 @@
                 </div>
             </div>
         </section>
+
         <section id="phase2">
             <h2 class="step-title">Select the Feature</h2>
             <div class="choice-container">
@@ -45,6 +49,7 @@
                 </div>
             </div>
         </section>
+
         <section id="final">
             <div class="ticket-card">
                 <h2 class="confirmed">Ticket Confirmed!</h2>
@@ -58,6 +63,7 @@
             </div>
         </section>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
