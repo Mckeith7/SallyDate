@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Premiere | Sally</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="sally_video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <div id="app">
+        <section id="intro" class="active">
+            <h1 class="glam-text">A Special Premiere</h1>
+            <p class="sub-text">Starring Sally</p>
+            <button class="main-btn" onclick="startExperience()">Get My Ticket</button>
+        </section>
+
+        <section id="phase1">
+            <h2 class="step-title">Pick the Vibe</h2>
+            <div class="choice-container">
+                <div class="glass-box" onclick="selectLocation('Private Cinema')">
+                    <img src="private.jpg" alt="Private">
+                    <p>Private Cinema</p>
+                </div>
+                <div class="glass-box" onclick="selectLocation('Outdoor Cinema')">
+                    <img src="outdoor.jpg" alt="Outdoor">
+                    <p>Outdoor Cinema</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="phase2">
+            <h2 class="step-title">Select the Feature</h2>
+            <div class="choice-container">
+                <div class="glass-box" onclick="selectMovie('Beauty in Black')">
+                    <img src="beauty.jpg" alt="Beauty in Black">
+                    <p>Beauty in Black</p>
+                </div>
+                <div class="glass-box" onclick="selectMovie('XO, Kitty')">
+                    <img src="kitty.jpg" alt="XO Kitty">
+                    <p>XO, Kitty</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="final">
+            <div class="ticket-card">
+                <h2 class="confirmed">Ticket Confirmed!</h2>
+                <div class="ticket-details">
+                    <p id="summary-text"></p>
+                    <p class="pickup">I'll pick you up this Saturday at 7:00 PM.</p>
+                </div>
+                <div class="footer-credit">
+                    <p>Designed by @mckeith._</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
